@@ -204,6 +204,7 @@ input::-webkit-outer-spin-button {
         }
 
         .results {
+            padding: 4rem;
             .amout strong,
             .total strong {
                 font-size: 4.8rem;
