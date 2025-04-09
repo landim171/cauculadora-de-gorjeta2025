@@ -15,14 +15,21 @@ function receiveNumberOfPeopleValue() {
 
 console.log(numberOfPeople)
 
-function receiveTipPorcentageValue(value) {
+function receiveTipPercentageValue(value) {
     tipPercentage = value / 100
 
     removeClassButtonSelected()
 
+    document.querySelector("#custom-tip").value = ""
+
     buttonSelected = document.querySelector('#button-${value}')
     buttonSelected.classList.add("button-selected")
 }
+
+ function reciveNumberOfPeopleValue(){
+    tipPercentage = document.querySelector("#custom-tip").valueAsNumber / 100
+ }
+
 
 function removeClassButtonSelected() {
     if (buttonSelected !== null) {
