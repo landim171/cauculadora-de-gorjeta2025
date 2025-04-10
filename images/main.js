@@ -49,7 +49,7 @@ function removeClassButtonSelected() {
 
 function calculateResult() {
     if (bill !== 0 && tipPercentage !== && numberOfPeople !== 0) {
-        let tipAmoutPersoncalculateTipAmoutPerson()
+        let tipAmoutPerson = calculateTipAmoutPerson()
         calculateTotalPerson(tipAmoutPerson)
 
         
@@ -67,5 +67,23 @@ function calculateTotalPerson(tipAmoutPerson) {
     let totalStrong = document.querySelector(".total strong")
         let totalAmoutPerson = bill / numberOfPeople + tipAmoutPerson
         totalStrong.textContent = '$${totalAmoutPerson.toFixed(2)}'
+
+}
+
+function reset()
+{
+    bill = 0
+    document.querySelector("#bill").value = ""
+
+    tipPercentage = 0
+    removeClassButtonSelected()
+    document.querySelector("#custom-tip").value = ""
+
+    numberOfPeople = 0
+    document.querySelector("#people").value = ""
+
+    document.querySelector("#.total strong").textContent = "0.00"
+    document.querySelector("#.amout strong").textContent = "0.00"
+
 
 }
